@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/screen3"
+    android:layout_height="match_parent">
+
+    <!-- Hike Name -->
+    <EditText
+        android:id="@+id/hikeNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Name of Hike"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+
+    <!-- Location -->
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Location"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hikeNameEditText" />
+
+    <!-- Date -->
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="240dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Date of the Hike"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationEditText" />
+
+    <!-- Time -->
+    <EditText
+        android:id="@+id/timeEditText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Time"
+        app:layout_constraintStart_toStartOf="@+id/dateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/dateEditText" />
+
+    <!-- Days -->
+    <EditText
+        android:id="@+id/numberOfDaysEditText"
+        android:layout_width="130dp"
+        android:layout_height="49dp"
+        android:hint="Days"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/locationEditText"
+        app:layout_constraintTop_toTopOf="@+id/timeEditText" />
+
+    <!-- Length -->
+    <EditText
+        android:id="@+id/lengthEditText"
+        android:layout_width="372dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:hint="Length the hike"
+        app:layout_constraintStart_toStartOf="@+id/timeEditText"
+        app:layout_constraintTop_toBottomOf="@+id/timeEditText" />
+
+    <!-- Parking Label -->
+    <TextView
+        android:id="@+id/parkingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="Parking Available:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lengthEditText" />
+
+    <!-- Difficulty Label -->
+    <TextView
+        android:id="@+id/difficultyLabel"
+        android:layout_width="188dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="22dp"
+        android:text="Level of difficulty:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parkingLabel" />
+
+    <!-- Difficulty Spinner -->
+    <Spinner
+        android:id="@+id/difficultySpinner"
+        android:layout_width="155dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/difficultyLabel"
+        app:layout_constraintTop_toTopOf="@+id/difficultyLabel" />
+
+    <!-- Description -->
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyLabel" />
+
+    <!-- Gear -->
+    <EditText
+        android:id="@+id/gearEditText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Required Gear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionEditText" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="87dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toEndOf="@+id/observationButton"
+        app:layout_constraintTop_toBottomOf="@+id/gearEditText2" />
+
+    <Button
+        android:id="@+id/observationButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="OBSERVATION"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gearEditText2" />
+
+    <Button
+        android:id="@+id/viewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:text="View"
+        app:layout_constraintStart_toEndOf="@+id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/gearEditText2" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="68dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintStart_toEndOf="@+id/dateEditText"
+        app:layout_constraintTop_toTopOf="@+id/dateEditText"
+        app:srcCompat="@drawable/date" />
+
+    <!-- Time FloatingActionButton -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="176dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/timeEditText"
+        app:layout_constraintTop_toTopOf="@+id/timeEditText"
+        app:srcCompat="@drawable/time" />
+
+    <!-- Radio Buttons -->
+    <RadioGroup
+        android:layout_width="134dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lengthEditText">
+
+        <!-- Yes RadioButton -->
+        <RadioButton
+            android:id="@+id/yesRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            app:layout_constraintStart_toEndOf="@+id/noRadioButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- No RadioButton -->
+        <RadioButton
+            android:id="@+id/noRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="No"
+            app:layout_constraintEnd_toStartOf="@+id/yesRadioButton"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RadioGroup>
+
+    <!--Title text-->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="100dp"
+        android:layout_height="27dp"
+        android:text="ADD HIKE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

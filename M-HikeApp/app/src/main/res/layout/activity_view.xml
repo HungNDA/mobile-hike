@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp">
+
+    <TextView
+        android:id="@+id/itemViewHikeId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hike Name and Location -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Hike Name -->
+            <ImageView
+                android:id="@+id/nameHikeIcon"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/name_hike" />
+
+            <TextView
+                android:id="@+id/viewHike"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1.2"
+                android:hint="Name hike:"
+                android:inputType="text" />
+
+            <!-- Location -->
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:src="@drawable/location"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/viewLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:hint="Location:"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <!-- Days of Hike, Time, Days -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/dateIcon"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/date_view" />
+            <TextView
+                android:id="@+id/editDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1.6"
+                android:hint="Date:"
+                android:inputType="text" />
+            <ImageView
+                android:id="@+id/timeIcon"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/watch" />
+            <TextView
+                android:id="@+id/viewTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1.2"
+                android:hint="Time:"
+                android:inputType="text" />
+
+            <ImageView
+                android:id="@+id/dayIcon"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/today" />
+
+            <TextView
+                android:id="@+id/viewNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.82"
+                android:hint="Day:"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/parkingIcon"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/parking" />
+
+            <TextView
+                android:id="@+id/viewParking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1.5"
+                android:hint="Parking:"
+                android:inputType="text" />
+            <ImageView
+                android:id="@+id/lengthIcon"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/distance" />
+
+            <TextView
+                android:id="@+id/viewLength"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.88"
+                android:hint="Length:"
+                android:inputType="text" />
+
+            <ImageView
+                android:id="@+id/levelIcon"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/level" />
+            <TextView
+                android:id="@+id/viewLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.8"
+                android:hint="Level:"
+                android:inputType="text" />
+        </LinearLayout>
+        <!-- Length of Hike, Description -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/viewDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="Description:"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/viewGear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Required Gear:"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Separator Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+</androidx.cardview.widget.CardView>
